@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import LocationForm from './components/LocationForm';
 import DataWrapper from './components/DataWrapper';
-import moment from 'moment';
 
 class App extends Component {
   constructor(props) {
@@ -37,6 +35,22 @@ class App extends Component {
     })
     console.log(result)
   }
+
+  // algorithim for getting high/low
+  // need acOn, heatOn, acCounter, heatCounter variables
+  // go through each item in array.
+    // if temp is greater than 75.
+      // iterate ac counter, seat acOn to true
+    // if next number is over 75 and acOn is true
+      // do not iterate counter
+    // if next number is less than or equal to 75 but greater than or equal to 62
+      // acOn is false
+    // if next number is less than 62
+      // heatOn is true, iterate heat counter
+    // if next number is less than 62 and heatOn is true
+      // do not iterate heat counter
+    // if next number greater than or equal to 62 and less than or equal to 75
+      // heatOn is false
 
   render() {
     return (
