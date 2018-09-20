@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Weekly Temps Component Component should render given correct props 1`] = `
+<div>
+  <p>
+    Average Weekly Temperature
+  </p>
+  <p>
+    69
+     degrees
+  </p>
+</div>
+`;

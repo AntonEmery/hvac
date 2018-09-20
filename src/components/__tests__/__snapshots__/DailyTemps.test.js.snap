@@ -1,0 +1,519 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avg Daily temps component Component renders correctly given correct props 1`] = `
+<div>
+  <p>
+    Avg Daily Temps
+  </p>
+  <div
+    className="bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa"
+  >
+    <style
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": ".bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .pie-chart-slice{stroke: #fff;
+        stroke-width: 1;
+        opacity: 1;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .pie-chart-slice:hover{opacity: 0.8;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .pie-chart-label{font-family: sans-serif;
+        font-size: 12px;
+        text-anchor: middle;
+        fill: #000;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .bar{fill: blue;
+        transition: x 0.35s ease-in, y 0.35s ease-in, height 0.5s ease-in, width 0.5s ease-in;
+        opacity: 1;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .bar:hover{opacity: 0.8;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .line{fill: none;
+        stroke-width: 1.5;
+        opacity: 0.7;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .line:hover{opacity: 1;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .area{opacity: 0.7;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .area:hover{opacity: 1;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .dot{stroke-width: 0;
+        opacity: 0.85;
+        transition: cx 0.35s ease-in, cy 0.35s ease-in, r 0.5s ease-in;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .dot:hover{opacity: 1;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa circle.data-point{r: 4px;
+        opacity: 0.7;
+        transition: cx 0.35s ease-in, cy 0.35s ease-in;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa circle.data-point:hover{r: 6px;
+        opacity: 1;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa circle.tick-circle{r: 2px;
+        fill: lightgrey;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .x circle.tick-circle{cy: 8px;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .axis{font-family: dobra-light,Arial,sans-serif;
+        font-size: 9px;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .axis .label{font: 14px arial;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .axis path,.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .axis line{fill: none;
+        stroke-width: 1;
+        shape-rendering: crispEdges;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa x.axis path{display: none;
+        stroke: lightgrey;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .tick line{stroke: lightgrey;
+        stroke-width: 1;
+        opacity: 0.7;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .x circle.tick-circle{fill: lightgrey;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .y circle.tick-circle{cx: -8px;
+        fill: lightgrey;}.bar-chart-8e011b72f0c228e222f05b9ffc24a0ff2b9b99aa .y.axis line{display: none;
+        stroke: lightgrey;}",
+        }
+      }
+    />
+    <svg
+      height={400}
+      style={Object {}}
+      width={450}
+    >
+      <g
+        style={Object {}}
+        transform="translate(50, 20)"
+      >
+        <g
+          className="x axis"
+          fill="none"
+          fontFamily="sans-serif"
+          fontSize={10}
+          style={Object {}}
+          textAnchor="middle"
+          transform="translate(0, 330)"
+        >
+          <path
+            className="domain"
+            d="M0.5,0V0.5H380.5V0"
+            stroke="#000"
+            style={Object {}}
+          />
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(190,0)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              y2={0}
+            />
+            <text
+              dy="0.71em"
+              fill="#000"
+              style={Object {}}
+              y={15}
+            />
+          </g>
+        </g>
+        <g
+          className="y axis"
+          fill="none"
+          fontFamily="sans-serif"
+          fontSize={10}
+          style={Object {}}
+          textAnchor="end"
+        >
+          <path
+            className="domain"
+            d="M-6,330.5H0.5V0.5H-6"
+            stroke="#000"
+            style={Object {}}
+          />
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,330.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              0
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,308.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              2
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,286.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              4
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,264.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              6
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,242.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              8
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,220.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              10
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,198.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              12
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,176.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              14
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,154.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              16
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,132.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              18
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,110.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              20
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,88.50000000000003)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              22
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,66.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              24
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,44.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              26
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,22.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              28
+            </text>
+          </g>
+          <g
+            className="tick"
+            opacity={1}
+            style={Object {}}
+            transform="translate(0,0.5)"
+          >
+            <line
+              stroke="#000"
+              style={Object {}}
+              x2={-6}
+            />
+            <text
+              dy="0.32em"
+              fill="#000"
+              style={Object {}}
+              x={-16}
+            >
+              30
+            </text>
+          </g>
+        </g>
+        <rect
+          className="bar"
+          height={165}
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "fill": "#1f77b4",
+            }
+          }
+          width={365.0980392156863}
+          x={7.4509803921568505}
+          y={165}
+        />
+        <rect
+          className="bar"
+          height={209}
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "fill": "#aec7e8",
+            }
+          }
+          width={365.0980392156863}
+          x={7.4509803921568505}
+          y={121}
+        />
+        <rect
+          className="bar"
+          height={286}
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "fill": "#ff7f0e",
+            }
+          }
+          width={365.0980392156863}
+          x={7.4509803921568505}
+          y={44}
+        />
+        <rect
+          className="bar"
+          height={330}
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "fill": "#ffbb78",
+            }
+          }
+          width={365.0980392156863}
+          x={7.4509803921568505}
+          y={0}
+        />
+        <rect
+          className="bar"
+          height={132}
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "fill": "#2ca02c",
+            }
+          }
+          width={365.0980392156863}
+          x={7.4509803921568505}
+          y={198}
+        />
+        <rect
+          className="bar"
+          height={330}
+          onClick={[Function]}
+          onMouseMove={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          style={
+            Object {
+              "fill": "#98df8a",
+            }
+          }
+          width={365.0980392156863}
+          x={7.4509803921568505}
+          y={0}
+        />
+      </g>
+    </svg>
+  </div>
+</div>
+`;
