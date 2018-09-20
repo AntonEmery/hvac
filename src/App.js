@@ -8,7 +8,8 @@ class App extends Component {
   constructor(props) {
     super(props)
       this.state = {
-       weatherData: []
+       weatherData: [],
+       tempData: []
       }
   }
 
@@ -21,7 +22,20 @@ class App extends Component {
         this.setState({
           weatherData: result
         })
+        this.parseData();
       })
+  }
+
+  parseData = () => {
+    let result = []
+    let tempData = this.state.weatherData.slice();
+    tempData.forEach((item, index) => {
+      let temps = item[index].map(item => {
+        return(item.temperature)
+      })
+      result.push(temps)
+    })
+    console.log(result)
   }
 
   render() {

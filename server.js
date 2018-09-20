@@ -22,21 +22,13 @@ for(var i = daysLeft; i>0; i--) {
 let dates = daysInMonth.map((day, i) => {
   return fetch(make_url(day)).then(_ => _.json())
   .then(_ => [day, _])
-  // if (i == 0 || i == 1) {
-  //   console.log(make_url(day))
-  //   return fetch(make_url(day))
-  //   .then(_ => _.json())
-  //   .then(_ => [day, _])
-  // } else {
-  //   return Promise.resolve()
-  // }
 })
 
 Promise.all(dates).then(rs => {
   responses = rs
-    .map(r => { if (r) {
+    .map((r, index) => { if (r) {
       console.log(r);
-      return { [r[0]]: r[1].hourly.data }
+      return { [index]: r[1].hourly.data }
     }
   })
   fs.writeFileSync('data.json', JSON.stringify(responses))
