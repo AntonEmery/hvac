@@ -8,25 +8,8 @@ class App extends Component {
   constructor(props) {
     super(props)
       this.state = {
-       daysInMonth: [],
-       requestMade: false,
        weatherData: []
       }
-  }
-
-  componentDidMount() {
-    let daysInMonth = []
-    let date = moment().format('YYYY:MM:DD');
-    console.log(date.replace(/:/g, '-'));
-    let elapsedDaysInMonth = moment().startOf('month').fromNow();
-    let daysLeft = parseInt(elapsedDaysInMonth.substring(0, 2));
-    for(var i = daysLeft; i>0; i--) {
-      let day = moment().subtract(i, 'days').format('YYYY-MM-DD');
-      daysInMonth.push(day)
-    }
-    this.setState({
-      daysInMonth
-    })
   }
 
   submitRequest = () => {
