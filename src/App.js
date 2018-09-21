@@ -86,7 +86,7 @@ class App extends Component {
           />
         {/* Display loading during API request */}
         {!this.state.displayData && this.state.loading && <p>Loading</p>}
-        {this.state.displayData && <HVACData />}
+        {this.state.displayData && <HVACData HVAC={this.state.HVAC} />}
       </div>
     );
   }
