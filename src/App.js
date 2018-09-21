@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import DataWrapper from './components/DataWrapper';
+import HVACData from './components/HVACData';
 
 class App extends Component {
   constructor(props) {
@@ -8,11 +8,14 @@ class App extends Component {
       this.state = {
        weatherData: [],
        tempData: [],
-       HVAC: []
+       HVAC: [],
+       loading: false,
+       displayData: false
       }
   }
 
   submitRequest = () => {
+    this.setState({ loading: true });
     fetch('http://localhost:3000/data')
       .then(data => {
         return data.json();
@@ -35,18 +38,16 @@ class App extends Component {
       let temps = item[index].map(item => {
         return(item.temperature)
       })
-      // results is an array of arrays of the temp ranges for each hour of the day
+      // results is an array of arrays of the temp ranges for each day
       result.push(temps)
     })
-    console.log(result)
-    // iterate thru array of temp ranges for each hour
-    result.forEach(hour => {
-      console.log(hour)
-      let highLow = hour.map(temp => {
-        let acOn = false;
-        let acCounter = 0;
-        let heatOn = false;
-        let heatCounter = 0;
+    result.forEach(days => {
+      let acOn = false;
+      let acCounter = 0;
+      let heatOn = false;
+      let heatCounter = 0;
+      // iterate thru each hourly temp in day
+      days.forEach(temp => {
         // logic for determining if ac or heat was turned on
         if(temp > 75 && acOn === false) {
           acCounter++;
@@ -61,30 +62,15 @@ class App extends Component {
           acOn = false;
           heatOn = false;
         }
-        return { acCounter, heatCounter }
       })
-      HVAC.push(highLow)
+      HVAC.push({acCounter, heatCounter})
     })
     this.setState({
-      HVAC
+      HVAC,
+      loading: false,
+      displayData: true
     })
   }
-
-  // algorithim for getting high/low
-  // need acOn, heatOn, acCounter, heatCounter variables
-  // go through each item in array.
-    // if temp is greater than 75.
-      // iterate ac counter, set acOn to true
-    // if next number is over 75 and acOn is true
-      // do not iterate counter
-    // if next number is less than or equal to 75 but greater than or equal to 62
-      // acOn is false
-    // if next number is less than 62 and heatOn is false
-      // heatOn is true, iterate heat counter
-    // if next number is less than 62 and heatOn is true
-      // do not iterate heat counter
-    // if next number greater than or equal to 62 and less than or equal to 75
-      // heatOn is false
 
   render() {
     return (
@@ -98,6 +84,9 @@ class App extends Component {
             value="View Data for Current Month"
             onClick={this.submitRequest}
           />
+        {/* Display loading during API request */}
+        {!this.state.displayData && this.state.loading && <p>Loading</p>}
+        {this.state.displayData && <HVACData />}
       </div>
     );
   }

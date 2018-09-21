@@ -3,20 +3,19 @@ import { BarChart } from 'react-easy-chart';
 
 
 
-class MeanTemp extends Component {
+class HVACData extends Component {
   render() {
-    const { maxTemp, minTemp } = this.props;
     return (
       <div>
-        <p>Max and Min Temp</p>
+        <p>HVAC Data</p>
         <BarChart
           axes
           colorBars
           width={250}
           height={400}
           data={[
-            {x: 'Max', y: maxTemp},
-            {x: 'Min', y: minTemp}
+            {x: 'Max', y: 10},
+            {x: 'Min', y: 5}
           ]}
         />
       </div>
@@ -24,4 +23,4 @@ class MeanTemp extends Component {
   }
 }
 
-export default MeanTemp;
+export default HVACData;
