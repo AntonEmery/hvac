@@ -6,13 +6,14 @@ import { BarChart } from 'react-easy-chart';
 class HVACData extends Component {
   render() {
     let hvac = this.props.HVAC;
-    console.log(hvac)
-    let data = hvac.map(item => {
-      return { x: 'ac', y: 5 }
-        // { x: 'heat', y: item.heatCounter }
-    })
+    let test = hvac.map((item, index) => {
+      return [
+        { x: index + 1, y: item.acCounter },
+        { x: index + 1, y: item.heatCounter }
+      ]
+      // reduce result into one array of objects
+    }).reduce((a, b) => a.concat(b), [])
 
-    console.log(data)
     return (
       <div>
         <p>HVAC Data</p>
@@ -22,7 +23,10 @@ class HVACData extends Component {
           width={800}
           height={400}
           data={
-            data
+            test.map(item => {
+              console.log(item)
+              return item;
+            })
           }
         />
       </div>
