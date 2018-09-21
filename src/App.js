@@ -7,7 +7,8 @@ class App extends Component {
     super(props)
       this.state = {
        weatherData: [],
-       tempData: []
+       tempData: [],
+       HVAC: []
       }
   }
 
@@ -40,22 +41,32 @@ class App extends Component {
     console.log(result)
     // iterate thru array of temp ranges for each hour
     result.forEach(hour => {
+      console.log(hour)
       let highLow = hour.map(temp => {
-        let acOn;
+        let acOn = false;
         let acCounter = 0;
-        let heatOn;
+        let heatOn = false;
         let heatCounter = 0;
         // logic for determining if ac or heat was turned on
-        if(temp > 75) {
+        if(temp > 75 && acOn === false) {
           acCounter++;
           acOn = true;
         }
-        if(temp < 62) {
+        if(temp < 62 && heatOn === false) {
           heatCounter++;
+          heatOn = true;
+          acOn = false
+        }
+        if(temp <= 75 && temp >= 62) {
+          acOn = false;
+          heatOn = false;
         }
         return { acCounter, heatCounter }
       })
       HVAC.push(highLow)
+    })
+    this.setState({
+      HVAC
     })
   }
 
@@ -63,12 +74,12 @@ class App extends Component {
   // need acOn, heatOn, acCounter, heatCounter variables
   // go through each item in array.
     // if temp is greater than 75.
-      // iterate ac counter, seat acOn to true
+      // iterate ac counter, set acOn to true
     // if next number is over 75 and acOn is true
       // do not iterate counter
     // if next number is less than or equal to 75 but greater than or equal to 62
       // acOn is false
-    // if next number is less than 62
+    // if next number is less than 62 and heatOn is false
       // heatOn is true, iterate heat counter
     // if next number is less than 62 and heatOn is true
       // do not iterate heat counter
@@ -84,7 +95,7 @@ class App extends Component {
         <input
             className="btn"
             type="submit"
-            value="Submit"
+            value="View Data for Current Month"
             onClick={this.submitRequest}
           />
       </div>
