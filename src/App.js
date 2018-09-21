@@ -25,15 +25,38 @@ class App extends Component {
   }
 
   parseData = () => {
+    let HVAC = []
     let result = []
     let tempData = this.state.weatherData.slice();
+    // iterate through array of objects that contain all the temperature data
+    // each inner array index is a hourly temp reading
     tempData.forEach((item, index) => {
       let temps = item[index].map(item => {
         return(item.temperature)
       })
+      // results is an array of arrays of the temp ranges for each hour of the day
       result.push(temps)
     })
     console.log(result)
+    // iterate thru array of temp ranges for each hour
+    result.forEach(hour => {
+      let highLow = hour.map(temp => {
+        let acOn;
+        let acCounter = 0;
+        let heatOn;
+        let heatCounter = 0;
+        // logic for determining if ac or heat was turned on
+        if(temp > 75) {
+          acCounter++;
+          acOn = true;
+        }
+        if(temp < 62) {
+          heatCounter++;
+        }
+        return { acCounter, heatCounter }
+      })
+      HVAC.push(highLow)
+    })
   }
 
   // algorithim for getting high/low
