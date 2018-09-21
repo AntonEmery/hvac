@@ -1,15 +1,10 @@
 ### Local Development Setup
 ````
-git clone https://github.com/AntonEmery/temperature-app
-cd temperature-app
-npm install
-npm start
-open http://localhost:3000
+
 ````
 
 ### Running Tests
 ````
-npm test
 ````
 
 ### Project Details
