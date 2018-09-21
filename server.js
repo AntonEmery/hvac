@@ -1,10 +1,10 @@
 #!/usr/bin/env node
-
+require('dotenv').config()
 let fs = require('fs')
 let moment = require('moment')
 let fetch  = require('node-fetch')
 
-let token    = '5a6971beaded415ef73e686e73f6be02'
+let token    = process.env.DARKSKY_KEY;
 let base_url = `https://api.darksky.net/forecast/`
 let make_url = day => `${base_url}${token}/45.5898,-122.5951,${day}T09:40:00`
 
